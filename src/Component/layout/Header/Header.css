@@ -1,0 +1,142 @@
+.NavbarItem{
+  background: #297ae6;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.orient{
+  width: 8vmax;
+  display: none;
+}
+.nav-menu{
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(8,auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 80vw;
+  justify-content: end;
+  margin-right: 0;
+}
+.nav-links{
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0.5rem;
+}
+.nav-links:hover{
+  color: #022a51;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.2s ease-out;
+}
+.nav-links .profile{
+  display: inline-block;
+  vertical-align: middle;
+}
+.profile .profile-image{
+  width: 40px;
+}
+.profile-image:hover{
+  width: 42px;
+  transition: all 0.2s ease-in;
+}
+.fa-bars{
+  color: black;
+}
+.menu-icon{
+  display: none;
+}
+.fa-sign-out{
+    color: white;
+    font-size: 20px;
+    
+}
+.fa-sign-out:hover{
+  cursor: pointer;
+  font-size: 22px;
+  transition: all 0.2s ease-out;
+}
+@media screen and (max-width:700px) and (min-width:300px){
+  .NavbarItem{
+    width: 100%;
+    position: relative;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  }
+  .nav-menu{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    top: 100px;
+    left: -120%; 
+    opacity: 1;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.2);
+    transition: all 0.5s ease-in-out;
+  }
+  .nav-menu.active{
+    background: white;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+  .nav-links{
+    color: rgb(68, 68, 68);
+    font-weight: 500;
+    text-align:start;
+    padding: 0.5rem;
+    margin-bottom: 10px;
+    width: 100%;
+    display: table;
+  }
+  .nav-links:hover, .nav-links:focus{
+    color: rgb(5, 5, 5);
+    font-family: 600;
+    transition: all 0.2s ease-out;
+  }
+  .orient{
+    display: block;
+    position:relative;
+    width: 8vmax;
+    top: 0;
+    left: 0;
+    transform: translate(10%,20%);
+  }
+  .menu-icon{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 30px;
+    transform: translate(100%,40%);
+    cursor: pointer;
+  }
+  .fa-times{
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+  }
+  .nav-links-mobile{
+    display: block;
+    text-align: center;
+    padding: 0.5rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    width: 30%;
+    background: #4ad9e4;
+    text-decoration: none;
+    color: rgb(3, 3, 3);
+    font-size: 1.1rem;
+    font-weight: 450;
+  }
+  .fa-sign-out{
+    color: #022a51;
+    font-size: 30px;
+  }
+
+}
